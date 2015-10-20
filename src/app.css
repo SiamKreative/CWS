@@ -86,6 +86,12 @@ Footer
 .copyright .glyphicon-heart {
 	color: #c0392b;
 }
+.gh-ribbon img {
+	position: absolute;
+	top: 0;
+	right: 0;
+	border: 0;
+}
 
 /*
 Homepage / Archive
