@@ -1,0 +1,22 @@
+{
+  "name": "cws",
+  "version": "0.0.1",
+  "description": "Static HTML5 site which promotes a WordPress maintenance & support service designed and maintained by N2Clic Ltd: http://wporigins.com/.",
+  "homepage": "http://coworking-spaces.siamkreative.com/",
+  "author": "Julien Vernet <julien@vernet.me>",
+  "main": "src/index.html",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/SiamKreative/CWS"
+  },
+  "bugs": {
+    "url": "https://github.com/SiamKreative/CWS/issues"
+  },
+  "private": true,
+  "devDependencies": {
+    "browser-sync": "^2.9.11",
+    "gulp": "^3.9.0",
+    "gulp-htmlmin": "*",
+    "gulp-minify-inline": "^0.1.1"
+  }
+}

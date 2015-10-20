@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+	<title>Coworking Spaces in Bangkok, Thailand</title>
+
+	<link href="//cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.5/css/bootstrap.min.css" rel="stylesheet">
+	<link href="//cdnjs.cloudflare.com/ajax/libs/datatables/1.10.9/css/dataTables.bootstrap.min.css" rel="stylesheet">
+	<link href="../vendor/simple-hint.min.css" rel="stylesheet">
+	<link href="../app.css" rel="stylesheet">
+
+	<div id="fb-root"></div>
+	<script>(function(d, s, id) {
+		var js, fjs = d.getElementsByTagName(s)[0];
+		if (d.getElementById(id)) return;
+		js = d.createElement(s); js.id = id;
+		js.src = "//connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.4&appId=732874826787651";
+		fjs.parentNode.insertBefore(js, fjs);
+	}(document, 'script', 'facebook-jssdk'));</script>
+</head>
+<body>
+
+	<div class="container-fluid">
+
+		<div class="header row vertical-align">
+			<div class="col-lg-4 col-md-4 text-right">
+				<a href="/" title="Coworking Spaces Thailand">
+					<svg class="logo logo-small" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" id="Capa_1" x="0" y="0" width="47" height="47" viewBox="0 0 47 47" xml:space="preserve" enable-background="new 0 0 47 47">
+						<g id="Layer_1_110_">
+							<path d="M17.57 15.94l-2.86-2.7c0.33-0.6 0.54-1.29 0.54-2.03 0-2.34-1.9-4.24-4.24-4.24 -2.34 0-4.24 1.9-4.24 4.24 0 2.34 1.9 4.24 4.24 4.24 0.83 0 1.59-0.25 2.24-0.65l2.86 2.7C16.54 16.92 17.02 16.4 17.57 15.94z"/>
+							<path d="M29.66 15.6l3.8-6.39c0.37 0.11 0.76 0.18 1.17 0.18 2.35 0 4.24-1.9 4.24-4.24 0-2.34-1.9-4.24-4.24-4.24 -2.34 0-4.24 1.9-4.24 4.24 0 1.16 0.47 2.21 1.23 2.98l-3.79 6.38C28.48 14.8 29.09 15.17 29.66 15.6z"/>
+							<path d="M42.76 20.95c-1.82 0-3.37 1.16-3.97 2.78l-5.28-0.52c0 0.04 0.01 0.08 0.01 0.12 0 0.69-0.08 1.36-0.21 2.01l5.28 0.52c0.32 2.02 2.06 3.58 4.18 3.58 2.34 0 4.24-1.9 4.24-4.24C47 22.85 45.1 20.95 42.76 20.95z"/>
+							<path d="M28.2 37.62l-1.18-5.16c-0.67 0.23-1.36 0.4-2.08 0.48l1.18 5.16c-1.35 0.71-2.29 2.11-2.29 3.75 0 2.34 1.9 4.24 4.24 4.24 2.34 0 4.24-1.9 4.24-4.24C32.31 39.55 30.48 37.69 28.2 37.62z"/>
+							<path d="M14.36 25.37l-6.57 2.2c-0.76-1.16-2.06-1.93-3.55-1.93C1.9 25.65 0 27.54 0 29.88c0 2.35 1.9 4.24 4.24 4.24 2.34 0 4.24-1.9 4.24-4.24 0-0.1-0.02-0.19-0.03-0.28l6.59-2.21C14.75 26.75 14.51 26.08 14.36 25.37z"/>
+							<circle cx="23.83" cy="23.32" r="7.27"/>
+						</g>
+					</svg>
+				</a>
+			</div>
+			<div class="col-lg-4 col-md-4 text-center">
+				<h1>Bangkok's Coworking Spaces</h1>
+				<div>A round-up of co-working spaces as more and more shared offices open up around Bangkok, Thailand.</div>
+			</div>
+			<div class="col-lg-4 col-md-4">
+				<form id="table-search-form" class="onload-show">
+					<input type="search" id="table-search-input" class="form-control" placeholder="Search for...">
+				</form>
+			</div>
+		</div>
+
+		<img class="loading-spinner" src="../images/ajax-loader.gif" width="66" height="66" alt="Loading...">
+
+		<table id="places" class="table table-striped onload-show">
+			<thead>
+				<tr>
+					<th>Name</th>
+					<th>Daily Price</th>
+					<th data-orderable="false">Location</th>
+					<th data-orderable="false">Website</th>
+					<th>Facebook</th>
+					<th data-orderable="false">Email</th>
+					<th data-orderable="false">Phone</th>
+					<th>Open Now</th>
+					<th>Edit</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr class="google-place-enabled" id="place_ChIJyYbXlbGf4jARa6cEKeSBPtM" data-facebookId="225300417542568">
+					<td class="place-name" data-toggle="modal" data-target="#details"></td>
+					<td class="place-price-daily">260</td>
+					<td class="place-location"></td>
+					<td class="place-website"></td>
+					<td class="place-facebook"></td>
+					<td class="place-email"><a href="mailto:connect@hubbathailand.com">connect@hubbathailand.com</a></td>
+					<td class="place-phone"></td>
+					<td class="place-open-now"></td>
+					<td class="place-edit" data-toggle="modal" data-target="#suggest_edits_modal"><button class="btn btn-primary"><span class="glyphicon glyphicon-edit" aria-hidden="true"></span></button></td>
+				</tr>
+				<tr class="google-place-enabled" id="place_ChIJk29fqVWe4jARpjO_NU9jqPk" data-facebookId="386910131418078">
+					<td class="place-name" data-toggle="modal" data-target="#details"></td>
+					<td class="place-price-daily">260</td>
+					<td class="place-location"></td>
+					<td class="place-website"></td>
+					<td class="place-facebook"></td>
+					<td class="place-email"><a href="mailto:contact@thehive.co.th">contact@thehive.co.th</a></td>
+					<td class="place-phone"></td>
+					<td class="place-open-now"></td>
+					<td class="place-edit" data-toggle="modal" data-target="#suggest_edits_modal"><button class="btn btn-primary"><span class="glyphicon glyphicon-edit" aria-hidden="true"></span></button></td>
+				</tr>
+				<tr class="google-place-enabled" id="place_ChIJDSfo1s2Y4jARl0aSVZajmn4" data-facebookId="460322350671997">
+					<td class="place-name" data-toggle="modal" data-target="#details"></td>
+					<td class="place-price-daily">260</td>
+					<td class="place-location"></td>
+					<td class="place-website"></td>
+					<td class="place-facebook"></td>
+					<td class="place-email"><a href="mailto:contact@launchpad.co.th">contact@launchpad.co.th</a></td>
+					<td class="place-phone"></td>
+					<td class="place-open-now"></td>
+					<td class="place-edit" data-toggle="modal" data-target="#suggest_edits_modal"><button class="btn btn-primary"><span class="glyphicon glyphicon-edit" aria-hidden="true"></span></button></td>
+				</tr>
+				<tr class="google-place-enabled" id="place_ChIJvS9EEKaf4jAR3V5Oc8N6MPI" data-facebookId="160924057294138">
+					<td class="place-name" data-toggle="modal" data-target="#details"></td>
+					<td class="place-price-daily">300</td>
+					<td class="place-location"></td>
+					<td class="place-website"><a target="_blank" href="http://www.thirdplacebangkok.com/">http://www.thirdplacebangkok.com/</a></td>
+					<td class="place-facebook"></td>
+					<td class="place-email"><a href="mailto:info@thirdplacebangkok.com">info@thirdplacebangkok.com</a></td>
+					<td class="place-phone"><a href="tel:+6627147929">02 714 7929</a></td>
+					<td class="place-open-now"></td>
+					<td class="place-edit" data-toggle="modal" data-target="#suggest_edits_modal"><button class="btn btn-primary"><span class="glyphicon glyphicon-edit" aria-hidden="true"></span></button></td>
+				</tr>
+				<tr class="google-place-enabled" id="place_ChIJRTMIJxec4jAR3SwVo2iJFVc" data-facebookId="148736101981454">
+					<td class="place-name" data-toggle="modal" data-target="#details"></td>
+					<td class="place-price-daily">220</td>
+					<td class="place-location"></td>
+					<td class="place-website"></td>
+					<td class="place-facebook"></td>
+					<td class="place-email"><a href="mailto:muchroomthailand@gmail.com">muchroomthailand@gmail.com</a></td>
+					<td class="place-phone"></td>
+					<td class="place-open-now"></td>
+					<td class="place-edit" data-toggle="modal" data-target="#suggest_edits_modal"><button class="btn btn-primary"><span class="glyphicon glyphicon-edit" aria-hidden="true"></span></button></td>
+				</tr>
+				<tr class="google-place-enabled" id="place_ChIJ93jx8e-e4jARZepZ5yQSTjY" data-facebookId="144432728908483">
+					<td class="place-name" data-toggle="modal" data-target="#details"></td>
+					<td class="place-price-daily">220</td>
+					<td class="place-location"></td>
+					<td class="place-website"></td>
+					<td class="place-facebook"></td>
+					<td class="place-email"><a href="mailto:info@glowfishoffices.com">info@glowfishoffices.com</a></td>
+					<td class="place-phone"></td>
+					<td class="place-open-now"></td>
+					<td class="place-edit" data-toggle="modal" data-target="#suggest_edits_modal"><button class="btn btn-primary"><span class="glyphicon glyphicon-edit" aria-hidden="true"></span></button></td>
+				</tr>
+				<tr class="google-place-enabled" id="place_ChIJBQnYtrSf4jARs2O7SVvhPtU" data-facebookId="124710911024324">
+					<td class="place-name" data-toggle="modal" data-target="#details"></td>
+					<td class="place-price-daily">220</td>
+					<td class="place-location"></td>
+					<td class="place-website"></td>
+					<td class="place-facebook"></td>
+					<td class="place-email">--</td>
+					<td class="place-phone"></td>
+					<td class="place-open-now"></td>
+					<td class="place-edit" data-toggle="modal" data-target="#suggest_edits_modal"><button class="btn btn-primary"><span class="glyphicon glyphicon-edit" aria-hidden="true"></span></button></td>
+				</tr>
+				<tr class="google-place-enabled" id="place_ChIJAwzHvrGf4jAR9zSxzILum9c" data-facebookId="1427980670779428">
+					<td class="place-name" data-toggle="modal" data-target="#details"></td>
+					<td class="place-price-daily">195</td>
+					<td class="place-location"></td>
+					<td class="place-website"><a target="_blank" href="http://madeehub.com/">http://madeehub.com/</a></td>
+					<td class="place-facebook"></td>
+					<td class="place-email"><a href="mailto:info@madeehub.com">info@madeehub.com</a></td>
+					<td class="place-phone"></td>
+					<td class="place-open-now"></td>
+					<td class="place-edit" data-toggle="modal" data-target="#suggest_edits_modal"><button class="btn btn-primary"><span class="glyphicon glyphicon-edit" aria-hidden="true"></span></button></td>
+				</tr>
+				<tr class="google-place-enabled" id="place_ChIJ6-wEV_ue4jARB2_JAg0Y2ik" data-facebookId="468087023225191">
+					<td class="place-name" data-toggle="modal" data-target="#details"></td>
+					<td class="place-price-daily">300</td>
+					<td class="place-location"></td>
+					<td class="place-website"></td>
+					<td class="place-facebook"></td>
+					<td class="place-email"><a href="mailto:sales@kliquedesk.com">sales@kliquedesk.com</a></td>
+					<td class="place-phone"></td>
+					<td class="place-open-now"></td>
+					<td class="place-edit" data-toggle="modal" data-target="#suggest_edits_modal"><button class="btn btn-primary"><span class="glyphicon glyphicon-edit" aria-hidden="true"></span></button></td>
+				</tr>
+				<tr class="google-place-enabled" id="place_ChIJLV-T08Se4jARDrQNL78L5gQ" data-facebookId="769020133190610">
+					<td class="place-name" data-toggle="modal" data-target="#details"></td>
+					<td class="place-price-daily">250</td>
+					<td class="place-location"></td>
+					<td class="place-website"></td>
+					<td class="place-facebook"></td>
+					<td class="place-email"><a href="mailto:info@draftboard.com">info@draftboard.com</a></td>
+					<td class="place-phone"></td>
+					<td class="place-open-now"></td>
+					<td class="place-edit" data-toggle="modal" data-target="#suggest_edits_modal"><button class="btn btn-primary"><span class="glyphicon glyphicon-edit" aria-hidden="true"></span></button></td>
+				</tr>
+				<!-- Below spaces with no Google Place -->
+				<tr data-facebookId="1421841208107950">
+					<td class="place-name">E88 Bangkok</td>
+					<td class="place-price-daily">300</td>
+					<td class="place-location">
+						<div class="btn-group" role="group" aria-label="...">
+							<button type="button" class="btn btn-default hint-top-s-big hint-anim" data-hint="W District 2Fl., Sukhumvit 69-71, Phra Khanong Nua, Wattana, Bangkok 10110">View address</button>
+							<a target="_blank" href="https://www.google.com/maps/dir/Current+Location/13.7140324,100.593219" class="btn btn-default"><span class="glyphicon glyphicon-map-marker" aria-hidden="true"></span> Locate</a>
+						</div>
+					</td>
+					<td class="place-website"><a target="_blank" target="_blank" href="http://www.e88bangkok.com/co-working-space/">http://www.e88bangkok.com/co-working-space/</a></td>
+					<td class="place-facebook"><a target="_blank" href="https://www.facebook.com/E88Bangkok">Facebook</a></td>
+					<td class="place-email"><a href="mailto:E88bangkok@gmail.com">E88bangkok@gmail.com</a></td>
+					<td class="place-phone"><a href="tel:+6621780111">02 1780 111</a></td>
+					<td class="place-open-now">--</td>
+					<td class="place-edit" data-toggle="modal" data-target="#suggest_edits_modal"><button class="btn btn-primary"><span class="glyphicon glyphicon-edit" aria-hidden="true"></span></button></td>
+				</tr>
+			</tbody>
+		</table>
+
+	</div>
+
+	<footer class="copyright text-center">
+		Made with <span class="glyphicon glyphicon-heart" aria-hidden="true"></span> in Bangkok by <a href="http://twitter.com/siamkreative/">SiamKreative</a>.<br> &copy; 2010<script>new Date().getFullYear()>2010&&document.write("-"+new Date().getFullYear());</script>. <a href="../privacypolicy.html">Privacy Policy</a>
+	</footer>
+
+	<!-- Modal Details -->
+	<div class="modal fade" id="details" tabindex="-1" role="dialog" aria-labelledby="detailsLabel" aria-hidden="true">
+		<div class="modal-dialog modal-lg" role="document">
+			<div class="modal-content">
+				<div class="modal-header">
+					<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+						<span aria-hidden="true">&times;</span>
+						<span class="sr-only">Close</span>
+					</button>
+					<h4 class="modal-title" id="detailsLabel">Modal title</h4>
+				</div>
+				<div class="modal-body">Loading...</div>
+				<div class="modal-footer">
+					<button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+					<a href="#" target="_blank" type="button" class="btn btn-primary">Get Directions</a>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<!-- Modal Edits -->
+	<div class="modal fade" id="suggest_edits_modal" tabindex="-1" role="dialog" aria-labelledby="suggest_edits_modalLabel" aria-hidden="true">
+		<div class="modal-dialog modal-lg" role="document">
+			<div class="modal-content">
+				<div class="modal-header">
+					<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+						<span aria-hidden="true">&times;</span>
+						<span class="sr-only">Close</span>
+					</button>
+					<h4 class="modal-title" id="detailsLabel">Suggest Edits</h4>
+				</div>
+				<div class="modal-body text-center">
+					<p class="lead">Please describe what you would like to update and why.<br> Are you part of the management of this co-working space?</p>
+					<form action="//formspree.io/julien+cws@vernet.me" method="POST">
+						<div class="row">
+							<div class="col-lg-6 col-md-6">
+								<div class="form-group">
+									<label class="sr-only" for="email">Email address</label>
+									<input required class="form-control" type="email" id="email" name="_replyto" placeholder="Email address">
+								</div>
+								<div class="form-group">
+									<label class="sr-only" for="first_name">First Name</label>
+									<input required class="form-control" type="text" id="first_name" name="first_name" placeholder="First Name">
+								</div>
+								<div class="form-group">
+									<label class="sr-only" for="last_name">Last Name</label>
+									<input required class="form-control" type="text" id="last_name" name="last_name" placeholder="Last Name">
+								</div>
+							</div>
+							<div class="col-lg-6 col-md-6">
+								<div class="form-group">
+									<label class="sr-only" for="suggested_edits">Suggested Edits</label>
+									<textarea required class="form-control" rows="6" id="suggested_edits" name="suggested_edits" placeholder="Please document your request. What are your sources?"></textarea>
+								</div>
+							</div>
+						</div>
+						<div class="checkbox">
+							<label>
+								<input type="checkbox" required> I agree with the <a href="#">terms and conditions</a>
+							</label>
+						</div>
+
+						<input type="hidden" name="_next" value="//coworking-spaces.siamkreative.com/thanks.html" />
+						<input type="hidden" name="_subject" value="CWS - New edits required" />
+						<input type="text" name="_gotcha" style="display:none" />
+
+						<button type="submit" class="btn btn-lg btn-primary">Send edits suggestions &rarr;</button>
+					</form>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div id="map" style="display: none;">Loading...</div>
+
+	<script src="//maps.googleapis.com/maps/api/js?key=AIzaSyAMPU2n9x0l4am-4cN1xVana-BuDHDph1I&amp;libraries=places"></script>
+	<script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+	<script src="//cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.5/js/bootstrap.min.js"></script>
+	<script src="//cdnjs.cloudflare.com/ajax/libs/datatables/1.10.9/js/jquery.dataTables.min.js"></script>
+	<script src="//cdnjs.cloudflare.com/ajax/libs/datatables/1.10.9/js/dataTables.bootstrap.min.js"></script>
+	<script src="//cdnjs.cloudflare.com/ajax/libs/moment.js/2.10.6/moment.min.js"></script>
+	<script src="../vendor/simpleStorage.js"></script>
+	<script src="../app.js"></script>
+
+</body>
+</html>
