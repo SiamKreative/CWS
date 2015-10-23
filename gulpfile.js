@@ -30,13 +30,12 @@ gulp.task('minify', function () {
 		.pipe(gulp.dest('dist'))
 });
 
-// Static server
-gulp.task('browser-sync', function () {
+// Static Server + watching html files
+gulp.task('serve', function () {
 	browserSync.init({
-		server: {
-			baseDir: './src'
-		}
+		server: './dist'
 	});
+	gulp.watch('src/*.html').on('change', browserSync.reload);
 });
 
 // The default task (called when you run `gulp` from cli)
