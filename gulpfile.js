@@ -1,7 +1,8 @@
 var gulp = require('gulp');
-var htmlmin = require('gulp-htmlmin');
 var minifyCss = require('gulp-minify-css');
+var uglify = require('gulp-uglify');
 var minifyInline = require('gulp-minify-inline');
+var htmlmin = require('gulp-htmlmin');
 var fileinclude = require('gulp-file-include');
 var browserSync = require('browser-sync').create();
 
@@ -27,6 +28,13 @@ gulp.task('minify-css', function () {
 		.pipe(browserSync.stream());
 });
 
+// Minify scripts
+gulp.task('minify-js', function () {
+	return gulp.src('./src/app.js')
+		.pipe(uglify())
+		.pipe(gulp.dest('dist'));
+});
+
 // Minify inline scripts & HTML
 gulp.task('minify-html', function () {
 	return gulp.src('./src/**/*.html')
@@ -42,7 +50,7 @@ gulp.task('minify-html', function () {
 });
 
 // Static Server + watching css/html files
-gulp.task('serve', ['minify-css'], function () {
+gulp.task('serve', ['minify-css', 'minify-js'], function () {
 	browserSync.init({
 		server: './dist'
 	});
@@ -51,4 +59,4 @@ gulp.task('serve', ['minify-css'], function () {
 });
 
 // The default task (called when you run `gulp` from cli)
-gulp.task('default', ['copy', 'minify-css', 'minify-html']);
+gulp.task('default', ['copy', 'minify-css', 'minify-js', 'minify-html']);
