@@ -16,6 +16,7 @@
   "devDependencies": {
     "browser-sync": "^2.9.11",
     "gulp": "^3.9.0",
+    "gulp-file-include": "^0.13.7",
     "gulp-htmlmin": "*",
     "gulp-minify-inline": "^0.1.1"
   }

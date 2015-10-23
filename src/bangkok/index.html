@@ -1,36 +1,18 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-	<meta charset="utf-8">
-	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<meta name="viewport" content="width=device-width, initial-scale=1">
-
-	<title>Coworking Spaces in Bangkok, Thailand</title>
-
-	<!-- Prefetch DNS -->
-	<link href="//cdnjs.cloudflare.com" rel="dns-prefetch">
-	<link href="//maps.googleapis.com/" rel="dns-prefetch">
-	<link href="//ajax.googleapis.com/" rel="dns-prefetch">
-	<link href="//connect.facebook.net/" rel="dns-prefetch">
-
-	<!-- Eliminate roundtrips -->
-	<link href="http://maps.gstatic.com/" rel="preconnect" crossorigin>
-	<link href="http://static.ak.facebook.com/" rel="preconnect" crossorigin>
-
-	<link href="//cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.5/css/bootstrap.min.css" rel="stylesheet">
-	<link href="//cdnjs.cloudflare.com/ajax/libs/datatables/1.10.9/css/dataTables.bootstrap.min.css" rel="stylesheet">
-	<link href="../vendor/simple-hint.min.css" rel="stylesheet">
-	<link href="../app.css" rel="stylesheet">
-
-	<div id="fb-root"></div>
-	<script>(function(d, s, id) {
-		var js, fjs = d.getElementsByTagName(s)[0];
-		if (d.getElementById(id)) return;
-		js = d.createElement(s); js.id = id;
-		js.src = "//connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.4&appId=732874826787651";
-		fjs.parentNode.insertBefore(js, fjs);
-	}(document, 'script', 'facebook-jssdk'));</script>
-</head>
+@@include('./partials/head.html', {
+	"title": "Coworking Spaces in Bangkok, Thailand - CWS",
+	"description": "A round-up of co-working spaces as more and more shared offices open up around Bangkok, Thailand.",
+	"fb_og": {
+		"type": "website",
+		"title": "Coworking Spaces in Thailand",
+		"site_name": "CWS",
+		"url": "http://coworking-spaces.siamkreative.com/",
+		"description": "This website lists the co-working spaces in Thailand. Currently our only destination is Bangkok, but we plan to add Chiang Mai &amp; Phuket anytime soon. Users will also be able to review the co-working spaces based on criteria like Comfort, Ambiance, Facilities, Location, etc.",
+		"locale": "en_US",
+		"image": "http://coworking-spaces.siamkreative.com/images/FB_OG_Image_600x315.jpg"
+	}
+})
 <body>
 
 	<div class="container-fluid">
@@ -210,12 +192,6 @@
 
 	</div>
 
-	<footer class="copyright text-center">
-		Made with <span class="glyphicon glyphicon-heart" aria-hidden="true"></span> in Bangkok by <a href="http://twitter.com/siamkreative/">SiamKreative</a>.<br> &copy; 2010<script>new Date().getFullYear()>2010&&document.write("-"+new Date().getFullYear());</script>. <a href="../privacypolicy.html">Privacy Policy</a>
-	</footer>
-
-	<a href="https://github.com/SiamKreative/CWS" class="gh-ribbon"><img src="https://camo.githubusercontent.com/365986a132ccd6a44c23a9169022c0b5c890c387/68747470733a2f2f73332e616d617a6f6e6177732e636f6d2f6769746875622f726962626f6e732f666f726b6d655f72696768745f7265645f6161303030302e706e67" alt="Fork me on GitHub" data-canonical-src="https://s3.amazonaws.com/github/ribbons/forkme_right_red_aa0000.png"></a>
-
 	<!-- Modal Details -->
 	<div class="modal fade" id="details" tabindex="-1" role="dialog" aria-labelledby="detailsLabel" aria-hidden="true">
 		<div class="modal-dialog modal-lg" role="document">
@@ -289,16 +265,7 @@
 		</div>
 	</div>
 
-	<div id="map" style="display: none;">Loading...</div>
-
-	<script src="//maps.googleapis.com/maps/api/js?key=AIzaSyAMPU2n9x0l4am-4cN1xVana-BuDHDph1I&amp;libraries=places"></script>
-	<script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
-	<script src="//cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.5/js/bootstrap.min.js"></script>
-	<script src="//cdnjs.cloudflare.com/ajax/libs/datatables/1.10.9/js/jquery.dataTables.min.js"></script>
-	<script src="//cdnjs.cloudflare.com/ajax/libs/datatables/1.10.9/js/dataTables.bootstrap.min.js"></script>
-	<script src="//cdnjs.cloudflare.com/ajax/libs/moment.js/2.10.6/moment.min.js"></script>
-	<script src="../vendor/simpleStorage.js"></script>
-	<script src="../app.js"></script>
+	@@include('./partials/footer.html')
 
 </body>
 </html>

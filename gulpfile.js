@@ -1,6 +1,7 @@
 var gulp = require('gulp');
 var htmlmin = require('gulp-htmlmin');
 var minifyInline = require('gulp-minify-inline');
+var fileinclude = require('gulp-file-include');
 var browserSync = require('browser-sync').create();
 
 // Everything except HTML files
@@ -18,6 +19,10 @@ gulp.task('copy', function () {
 // Minify inline scripts & HTML
 gulp.task('minify', function () {
 	return gulp.src('./src/**/*.html')
+		.pipe(fileinclude({
+			prefix: '@@',
+			basepath: './src/'
+		}))
 		.pipe(minifyInline())
 		.pipe(htmlmin({
 			collapseWhitespace: true
