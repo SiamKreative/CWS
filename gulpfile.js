@@ -29,6 +29,7 @@ gulp.task('minify-css', function () {
 });
 
 // Minify scripts
+gulp.task('js-watch', ['minify-js'], browserSync.reload);
 gulp.task('minify-js', function () {
 	return gulp.src('./src/app.js')
 		.pipe(uglify())
@@ -36,6 +37,7 @@ gulp.task('minify-js', function () {
 });
 
 // Minify inline scripts & HTML
+gulp.task('html-watch', ['minify-html'], browserSync.reload);
 gulp.task('minify-html', function () {
 	return gulp.src('./src/**/*.html')
 		.pipe(fileinclude({
@@ -55,7 +57,8 @@ gulp.task('serve', ['minify-css', 'minify-js'], function () {
 		server: './dist'
 	});
 	gulp.watch('./src/app.css', ['minify-css']);
-	gulp.watch('./src/*.html').on('change', browserSync.reload);
+	gulp.watch('./src/app.js', ['js-watch']);
+	gulp.watch('./src/**/*.html', ['html-watch']);
 });
 
 // The default task (called when you run `gulp` from cli)
