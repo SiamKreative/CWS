@@ -28,7 +28,7 @@ gulp.task('minify-css', function () {
 });
 
 // Minify inline scripts & HTML
-gulp.task('minify', function () {
+gulp.task('minify-html', function () {
 	return gulp.src('./src/**/*.html')
 		.pipe(fileinclude({
 			prefix: '@@',
@@ -51,4 +51,4 @@ gulp.task('serve', ['minify-css'], function () {
 });
 
 // The default task (called when you run `gulp` from cli)
-gulp.task('default', ['copy', 'minify-css', 'minify']);
+gulp.task('default', ['copy', 'minify-css', 'minify-html']);
