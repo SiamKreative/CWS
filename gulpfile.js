@@ -6,6 +6,7 @@ var minifyInline = require('gulp-minify-inline');
 var htmlmin = require('gulp-htmlmin');
 var fileinclude = require('gulp-file-include');
 var browserSync = require('browser-sync').create();
+var del = require('del');
 
 // Everything except HTML files
 var filesToMove = [
@@ -42,6 +43,11 @@ gulp.task('minify-js', function () {
 
 // Minify inline scripts & HTML
 gulp.task('html-watch', ['minify-html'], browserSync.reload);
+gulp.task('html', ['minify-html'], function () {
+	return del([
+		'dist/partials/'
+	]);
+});
 gulp.task('minify-html', function () {
 	return gulp.src('./src/**/*.html')
 		.pipe(fileinclude({
@@ -66,4 +72,4 @@ gulp.task('serve', ['minify-css', 'minify-js'], function () {
 });
 
 // The default task (called when you run `gulp` from cli)
-gulp.task('default', ['copy', 'minify-css', 'minify-js', 'minify-html']);
+gulp.task('default', ['copy', 'minify-css', 'minify-js', 'html']);
