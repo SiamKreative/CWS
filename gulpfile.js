@@ -1,6 +1,7 @@
 var gulp = require('gulp');
 var minifyCss = require('gulp-minify-css');
 var uglify = require('gulp-uglify');
+var stripDebug = require('gulp-strip-debug');
 var minifyInline = require('gulp-minify-inline');
 var htmlmin = require('gulp-htmlmin');
 var fileinclude = require('gulp-file-include');
@@ -32,6 +33,7 @@ gulp.task('minify-css', function () {
 gulp.task('js-watch', ['minify-js'], browserSync.reload);
 gulp.task('minify-js', function () {
 	return gulp.src('./src/app.js')
+		.pipe(stripDebug())
 		.pipe(uglify())
 		.pipe(gulp.dest('dist'));
 });
