@@ -10,6 +10,8 @@ var browserSync = require('browser-sync').create();
 // Everything except HTML files
 var filesToMove = [
 	'./src/**',
+	'!./src/**/*.css',
+	'!./src/**/*.js',
 	'!./src/**/*.html'
 ];
 
